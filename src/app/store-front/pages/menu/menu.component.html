@@ -1,0 +1,124 @@
+<div class="flex flex-col lg:flex-row bg-base-100 min-h-screen">
+  <!-- Contenido principal -->
+  <div class="flex-1 p-6">
+    <h1 class="text-4xl font-extrabold text-center mb-4 text-primary">☕ Menú de la Cafetería</h1>
+    <p class="text-center mb-8 text-base-content">Disfrutá una experiencia única de café, té y delicias horneadas.</p>
+
+    <!-- Tabs -->
+    <div role="tablist" class="tabs tabs-boxed justify-center mb-10">
+      <a role="tab" class="tab tab-active">Café</a>
+      <a role="tab" class="tab">Tés</a>
+      <a role="tab" class="tab">Pastelería</a>
+      <a role="tab" class="tab">Sandwiches</a>
+      <a role="tab" class="tab">Combos</a>
+    </div>
+
+    <!-- Sección destacada -->
+    <div class="mb-8">
+      <div class="alert alert-success shadow-lg mb-4">
+        <span class="font-bold text-lg">🎉 Promoción del Día:</span>
+        <span class="ml-2">¡Café Latte + Medialuna por AR$1700!</span>
+      </div>
+    </div>
+
+    <!-- Grid de productos -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- CARD 1 -->
+      <div class="card bg-base-200 shadow-xl transition hover:scale-105 duration-200">
+        <figure><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Latte" class="h-48 w-full object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">
+            Latte
+            <div class="badge badge-secondary">Nuevo</div>
+          </h2>
+          <p>Espresso suave con leche vaporizada.</p>
+          <div class="flex items-center gap-2 text-yellow-500">
+            ★★★★☆ <span class="text-xs text-base-content">(125)</span>
+          </div>
+          <div class="card-actions justify-between mt-4">
+            <span class="text-lg font-bold text-primary">AR$1200</span>
+            <button class="btn btn-accent btn-sm"><i class="fa-solid fa-plus mr-1"></i>Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card bg-base-200 shadow-xl hover:shadow-2xl hover:scale-105 transition">
+        <figure><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Capuccino" class="h-48 w-full object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Capuccino <span class="badge badge-outline">Clásico</span></h2>
+          <p>Un favorito espumoso con canela opcional.</p>
+          <div class="flex items-center gap-2 text-yellow-500">
+            ★★★★★ <span class="text-xs text-base-content">(230)</span>
+          </div>
+          <div class="card-actions justify-between mt-4">
+            <span class="text-lg font-bold text-primary">AR$1300</span>
+            <button class="btn btn-accent btn-sm"><i class="fa-solid fa-plus mr-1"></i>Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card bg-base-200 shadow-xl hover:scale-105 transition">
+        <figure><img src="https://images.unsplash.com/photo-1606813902936-43f0f13ccab3" alt="Medialunas" class="h-48 w-full object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Medialunas</h2>
+          <p>Clásicas, dulces o saladas. Horneadas a diario.</p>
+          <div class="flex items-center gap-2 text-yellow-500">
+            ★★★★☆ <span class="text-xs text-base-content">(98)</span>
+          </div>
+          <div class="card-actions justify-between mt-4">
+            <span class="text-lg font-bold text-primary">AR$900</span>
+            <button class="btn btn-accent btn-sm"><i class="fa-solid fa-plus mr-1"></i>Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Otros productos... -->
+      <div class="card bg-base-200 shadow-xl hover:scale-105 transition">
+        <figure><img src="https://images.unsplash.com/photo-1582467988903-89e6f9b2f2c2" alt="Sandwich" class="h-48 w-full object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Sandwich de Jamón & Queso</h2>
+          <p>Pan artesanal + ingredientes frescos.</p>
+          <div class="card-actions justify-between mt-4">
+            <span class="text-lg font-bold text-primary">AR$1500</span>
+            <button class="btn btn-accent btn-sm"><i class="fa-solid fa-plus mr-1"></i>Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 shadow-xl hover:scale-105 transition">
+        <figure><img src="https://images.unsplash.com/photo-1517685352821-92cf88aee5a5" alt="Combo" class="h-48 w-full object-cover" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">Combo Desayuno</h2>
+          <p>Café + 2 Medialunas. ¡Ideal para empezar el día!</p>
+          <div class="badge badge-success">Recomendado</div>
+          <div class="card-actions justify-between mt-4">
+            <span class="text-lg font-bold text-primary">AR$1900</span>
+            <button class="btn btn-accent btn-sm"><i class="fa-solid fa-plus mr-1"></i>Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carrito lateral -->
+  <div class="w-full lg:w-80 bg-base-300 p-4 border-l border-base-200">
+    <h2 class="text-2xl font-semibold mb-4">🛒 Tu pedido</h2>
+    <ul class="menu">
+      <li><span>☕ Latte x1 <span class="badge badge-primary">AR$1200</span></span></li>
+      <li><span>🥐 Medialunas x2 <span class="badge badge-primary">AR$1800</span></span></li>
+    </ul>
+    <div class="divider"></div>
+    <div class="flex justify-between font-bold text-lg mb-4">
+      <span>Total:</span>
+      <span>AR$3000</span>
+    </div>
+    <button class="btn btn-success w-full">
+      <i class="fa-solid fa-credit-card mr-2"></i>Finalizar Pedido
+    </button>
+  </div>
+</div>
+
+<!-- Agregar FontAwesome -->
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>

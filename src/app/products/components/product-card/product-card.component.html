@@ -1,0 +1,16 @@
+<div class="card card-compact bg-base-100 shadow-xl animate-fadeIn">
+  <figure>
+    <img [src]="producto().images | productImage" [alt]="producto().nombre" crossorigin="anonymous"/>
+
+  </figure>
+
+  <div class="card-body">
+    <a class="link link-accent" [routerLink]="['/product',producto()._id]">
+      <h2 class="card-title font-roboto text-accent text-lg">{{producto().nombre}}</h2>
+    </a>
+    <p>{{producto().descripcion | slice : 0 : 70  }}...</p>
+    <div class="card-actions justify-end">
+      <a class="link link-accent" [routerLink]="['/product',producto()._id]">Ver producto</a>
+    </div>
+  </div>
+</div>

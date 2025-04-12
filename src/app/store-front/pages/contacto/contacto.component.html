@@ -1,0 +1,51 @@
+<div class="bg-base-100 min-h-screen p-6 space-y-12">
+
+  <!-- Encabezado -->
+  <div class="text-center">
+    <h1 class="text-5xl font-bold text-primary mb-4">¡Hablemos de Café!</h1>
+    <p class="text-lg text-base-content/70">¿Tenés dudas, sugerencias o solo querés decirnos hola? Escribinos. ☕</p>
+  </div>
+
+  <!-- Info + Formulario -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <!-- Datos de contacto -->
+    <div class="space-y-6">
+      <div class="card bg-base-200 shadow-lg p-6">
+        <h2 class="text-2xl font-bold mb-4">📍 Encontranos</h2>
+        <p class="text-lg">Av. del Café 123, Buenos Aires, Argentina</p>
+        <iframe
+          class="w-full h-64 mt-4 rounded-lg"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtxEjXDEMO_KEY_AQUI&q=Buenos+Aires+Cafeteria">
+        </iframe>
+      </div>
+
+      <div class="card bg-base-200 shadow-lg p-6">
+        <h2 class="text-2xl font-bold mb-4">📞 Contacto</h2>
+        <p><strong>Teléfono:</strong> +54 9 11 1234-5678</p>
+        <p><strong>Email:</strong> holacafeteriafeliz.com</p>
+        <p><strong>Horarios:</strong> Lun a Sáb de 8:00 a 20:00</p>
+
+        <div class="mt-4 flex gap-4">
+          <a href="#" class="btn btn-sm btn-outline btn-primary"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="#" class="btn btn-sm btn-outline btn-info"><i class="fa-brands fa-facebook"></i> Facebook</a>
+          <a href="#" class="btn btn-sm btn-outline btn-success"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulario -->
+    <div class="card bg-base-200 shadow-lg p-6">
+      <h2 class="text-2xl font-bold mb-4">📬 Enviános tu mensaje</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Tu nombre" class="input input-bordered w-full" />
+        <input type="email" placeholder="Tu email" class="input input-bordered w-full" />
+        <input type="tel" placeholder="Tu teléfono (opcional)" class="input input-bordered w-full" />
+        <textarea placeholder="Escribí tu mensaje..." class="textarea textarea-bordered w-full h-32"></textarea>
+        <button class="btn btn-primary w-full">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+</div>

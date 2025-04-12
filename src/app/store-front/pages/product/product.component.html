@@ -1,0 +1,27 @@
+<div class="text-center mb-10">
+  <h1 class="text-5xl font-bold text-primary mb-2">Nuestros Productos</h1>
+  <p class="text-base-content/70 text-lg">Café, panificados y dulces que alegran el alma ☕🍰</p>
+</div>
+
+<!-- Filtros -->
+<div class="flex flex-wrap gap-4 justify-center mb-8">
+  <button class="btn btn-outline btn-sm btn-primary">Todos</button>
+  <button class="btn btn-outline btn-sm btn-accent">Café</button>
+  <button class="btn btn-outline btn-sm btn-secondary">Tortas</button>
+  <button class="btn btn-outline btn-sm btn-warning">Combos</button>
+  <button class="btn btn-outline btn-sm btn-info">Panadería</button>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-2 gap-3">
+
+  @for (producto of productsResource.value()?.productos; track $index) {
+    <product-card [producto]="producto" />
+
+    }
+    <!-- Empty -->
+    @empty {
+    <p>No hay productos</p>
+    }
+
+</div>
+
