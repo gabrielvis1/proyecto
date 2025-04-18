@@ -1,11 +1,13 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Signal } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
+import { Producto } from '@products/interfaces/producto.interface';
 import { ProductosService } from '@products/services/producto.service';
+import { ProductCaroselComponent } from "../../../products/components/product-carosel/product-carosel.component";
 
 @Component({
   selector: 'app-product-page',
-  imports: [],
+  imports: [ProductCaroselComponent],
   templateUrl: './product-page.component.html',
 })
 export class ProductPageComponent {
@@ -17,4 +19,5 @@ export class ProductPageComponent {
     request:()=>({id:this.productId}),
     loader:({request})=> this.ProductosService.getProductoById(request.id),
   });
+
 }

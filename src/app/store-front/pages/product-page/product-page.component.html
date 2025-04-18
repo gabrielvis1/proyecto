@@ -1,61 +1,66 @@
 @if(productResource.isLoading()){
   <div class="flex justify-center items-center h-screen">
-  <span class="loading loading-spinner loading-lg"></span>
+    <span class="loading loading-spinner loading-lg"></span>
   </div>
 }
+
 @if(productResource.hasValue()){
+  <div class="min-h-screen bg-base-100 p-6 md:p-12">
+    <!-- Info principal del producto -->
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+      <!-- Imágenes -->
 
-  <!-- Encabezado del producto -->
-  <div class="min-h-screen bg-base-100 p-8">
-    <div class="grid md:grid-cols-2 gap-10 items-center">
-      <figure>
-        <img class="rounded-2xl shadow-xl" src="https://images.unsplash.com/photo-1604908177527-402f55f6fa5e" alt="Café molido especial" />
-      </figure>
       <div>
-        <h1 class="text-4xl font-bold text-primary mb-2">{{productResource.value()?.nombre}}</h1>
-        <p class="text-base-content/70 text-lg mb-4">Selección premium de granos 100% arábicos, tostado medio. Ideal para espresso o prensa francesa.</p>
-        <div class="text-2xl font-bold text-success mb-4">$3,400</div>
-        <button class="btn btn-primary btn-wide">Añadir al carrito</button>
+        <product-carosel [images]="productResource.value().images"/>
+      </div>
 
-        <div class="mt-6">
-          <h3 class="font-semibold text-lg mb-2">Especificaciones</h3>
-          <ul class="list-disc list-inside text-base-content">
-            <li>Origen: Mérida, Venezuela</li>
-            <li>Presentación: 250g</li>
-            <li>Tostado medio</li>
-            <li>Molido para espresso y prensa francesa</li>
-            <li>100% Arábica</li>
-            <li>Sin azúcar añadida</li>
-          </ul>
+      <!-- Detalles -->
+      <div>
+        <h1 class="text-4xl font-bold text-primary mb-2">{{productResource.value().nombre}}</h1>
+        <p class="text-base-content/70 mb-4">{{productResource.value().descripcion}}</p>
+
+        <div class="mb-2">
+          <span class="badge badge-secondary">{{productResource.value().categoria}}</span>
+        </div>
+
+        <div class="text-2xl font-bold text-success mb-2">${{productResource.value().precio_venta}}</div>
+        <button class="btn btn-primary btn-wide mb-4">Añadir al carrito</button>
+
+        <!-- Stock -->
+        <div class="mb-4">
+          <span class="text-sm text-base-content">Stock disponible: <strong>{{productResource.value().stock_disponible}}</strong> contiene: {{productResource.value().unidad}} unidad</span>
         </div>
       </div>
     </div>
 
-    <!-- Recetas que podés hacer -->
+    <!-- Usos o recetas -->
     <div class="mt-16">
-      <h2 class="text-3xl font-bold text-center mb-6">Recetas que podés hacer con este café ☕🍩</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Receta 1 -->
-        <div class="card bg-base-200 shadow-lg">
+      <h2 class="text-2xl font-bold mb-4 text-center">¿Qué podés hacer con este producto?</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+      </div>
+    </div>
+
+    <!-- Recetas sugeridas -->
+    <div class="mt-16">
+      <h2 class="text-2xl font-bold text-center mb-6">Recetas que podés probar 🍝☕</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Aquí podrías hacer un ngFor con recetas del backend, si lo integrás -->
+        <div class="card bg-base-200 shadow-md">
           <div class="card-body">
             <h3 class="card-title">Affogato Clásico</h3>
-            <p>Sirve una bola de helado de vainilla y vierte encima un shot caliente de este café molido. ¡Simple y espectacular!</p>
+            <p>Sirve una bola de helado y verté un shot caliente de este producto. Delicioso y simple.</p>
           </div>
         </div>
-
-        <!-- Receta 2 -->
-        <div class="card bg-base-200 shadow-lg">
+        <div class="card bg-base-200 shadow-md">
           <div class="card-body">
             <h3 class="card-title">Tiramisú Venezolano</h3>
-            <p>Usá este café para mojar las vainillas del tiramisú. Aporta aroma y profundidad al postre clásico.</p>
+            <p>Ideal para empapar las vainillas con un aroma que resalta los sabores.</p>
           </div>
         </div>
-
-        <!-- Receta 3 -->
-        <div class="card bg-base-200 shadow-lg">
+        <div class="card bg-base-200 shadow-md">
           <div class="card-body">
-            <h3 class="card-title">Pastel de Café y Nuez</h3>
-            <p>Ideal para hornear. Agregá 2 cucharadas de café molido a tu mezcla de bizcocho con nueces tostadas.</p>
+            <h3 class="card-title">Bizcocho con toque especial</h3>
+            <p>Agregá un poco de este producto a tus mezclas para lograr un sabor único.</p>
           </div>
         </div>
       </div>
@@ -63,7 +68,7 @@
 
     <!-- Opinión del creador -->
     <div class="mt-16 text-center">
-      <p class="italic text-base-content/70">"Probablemente uno de los cafés más aromáticos que hemos tenido en tienda. Ideal para compartir una buena tarde." – Elvis Briceño</p>
+      <p class="italic text-base-content/70 max-w-xl mx-auto">"Seleccionamos con mucho cuidado cada producto para ofrecerte lo mejor de nuestra tierra y experiencia. Disfrutalo con cariño." – Elvis Briceño</p>
     </div>
   </div>
 }

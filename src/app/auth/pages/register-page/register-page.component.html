@@ -1,0 +1,88 @@
+<h2 class="text-center text-3xl font-bold text-primary">Crear Cuenta</h2>
+
+<form class="space-y-4">
+  <!-- Nombre -->
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Nombre</span>
+    </label>
+    <input
+      type="text"
+      name="nombre"
+      required
+      class="input input-bordered w-full"
+      placeholder="Tu nombre"
+    />
+  </div>
+
+  <!-- Apellido -->
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Apellido</span>
+    </label>
+    <input
+      type="text"
+      name="apellido"
+      required
+      class="input input-bordered w-full"
+      placeholder="Tu apellido"
+    />
+  </div>
+
+  <!-- Nick -->
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Nombre de usuario (Nick)</span>
+    </label>
+    <input
+      type="text"
+      name="nick"
+      required
+      class="input input-bordered w-full"
+      placeholder="Ej: elviscafe123"
+    />
+  </div>
+
+  <!-- Email -->
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Correo electrónico</span>
+    </label>
+    <input
+      type="email"
+      name="email"
+      required
+      class="input input-bordered w-full"
+      placeholder="ejemplo@correo.com"
+    />
+  </div>
+
+  <!-- Contraseña -->
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Contraseña</span>
+    </label>
+    <input
+      type="password"
+      name="password"
+      required
+      class="input input-bordered w-full"
+      placeholder="********"
+    />
+  </div>
+
+  <!-- Botón de Registro -->
+  <div class="form-control mt-6">
+    <button type="submit" class="btn btn-primary w-full">Registrarse</button>
+  </div>
+</form>
+
+<!-- Separador -->
+<div class="divider">¿Ya tenés una cuenta?</div>
+
+<!-- Botón de Ingreso -->
+<div class="form-control">
+  <a routerLink="/auth/login" class="btn btn-outline btn-accent w-full">
+    Iniciar sesión
+  </a>
+</div>
