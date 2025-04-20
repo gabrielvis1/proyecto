@@ -1,6 +1,7 @@
 <h2 class="text-center text-3xl font-bold text-primary">Iniciar Sesión</h2>
 
-    <form class="space-y-4" >
+    <form class="space-y-4" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
       <!-- Email -->
       <div class="form-control">
         <label class="label">
@@ -12,6 +13,7 @@
           required
           class="input input-bordered w-full"
           placeholder="ejemplo@correo.com"
+          formControlName="email"
         />
       </div>
 
@@ -26,14 +28,23 @@
           required
           class="input input-bordered w-full"
           placeholder="********"
+          formControlName="password"
         />
       </div>
 
       <!-- Botón de Login -->
       <div class="form-control mt-6">
-        <button type="submit" class="btn btn-primary w-full">Ingresar</button>
+        <button type="submit" class="btn btn-primary w-full">Login</button>
       </div>
     </form>
+
+    @if(hasError()){
+      <div class="fixed top-4 right-4 z-50">
+        <div class="alert alert-error shadow-lg w-fit">
+          <span>Por favor verifica los datos ingresados</span>
+        </div>
+      </div>
+    }
 
     <!-- Separador -->
     <div class="divider">¿No tenés cuenta?</div>
