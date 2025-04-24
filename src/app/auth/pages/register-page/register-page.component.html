@@ -12,6 +12,7 @@
       required
       class="input input-bordered w-full"
       placeholder="Tu nombre"
+      formControlName="nombre"
     />
   </div>
 
@@ -26,6 +27,7 @@
       required
       class="input input-bordered w-full"
       placeholder="Tu apellido"
+      formControlName="apellido"
     />
   </div>
 
@@ -40,6 +42,7 @@
       required
       class="input input-bordered w-full"
       placeholder="Ej: elviscafe123"
+      formControlName="nick"
     />
   </div>
 
@@ -54,6 +57,7 @@
       required
       class="input input-bordered w-full"
       placeholder="ejemplo@correo.com"
+      formControlName="email"
     />
   </div>
 
@@ -68,6 +72,7 @@
       required
       class="input input-bordered w-full"
       placeholder="********"
+      formControlName="password"
     />
   </div>
 
@@ -84,6 +89,15 @@
     </div>
   </div>
 }
+
+@if(hasSucces()){
+  <div class="fixed top-4 right-4 z-50">
+    <div class="alert alert-success shadow-lg w-fit">
+      <span>Usuario creado correctamente</span>
+    </div>
+  </div>
+}
+
 
 <!-- Separador -->
 <div class="divider">¿Ya tenés una cuenta?</div>

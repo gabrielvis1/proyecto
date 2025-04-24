@@ -11,14 +11,16 @@ import { AuthService } from '@auth/services/auth.service';
 export class RegisterPageComponent {
   fb = inject(FormBuilder)
   hasError = signal(false)
+  hasSucces = signal(false)
   isPosting =signal(false)
   router = inject(Router)
 
   authService = inject(AuthService);
+
   registerForm = this.fb.group({
-    nombre: ['',[Validators.required, ]],
-    apellido: ['',[Validators.required, ]],
-    nick: ['',[Validators.required, ]],
+    nombre: [''],
+    apellido: [''],
+    nick: [''],
     email: ['',[Validators.required, Validators.email]],
     password:['',[Validators.required, Validators.minLength(6)]],
   })
@@ -32,6 +34,15 @@ export class RegisterPageComponent {
       return;
     }
     const {nombre='',apellido='',nick='', email= '',password =''}= this.registerForm.value;
-
+    this.authService.register(nombre!,apellido!,nick!,email!,password!).subscribe((isRegister)=>{
+      if(isRegister){
+        this.hasSucces.set(true);
+        setTimeout(()=>{
+          this.hasSucces.set(false);
+        },5000);
+        return;
+      }
+      this.hasError.set(true);
+    })
   }
 }

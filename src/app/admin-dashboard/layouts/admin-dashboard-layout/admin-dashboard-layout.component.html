@@ -1,0 +1,121 @@
+<!-- Responsivo y minimalista -->
+<div class="drawer lg:drawer-open h-screen">
+  <input id="admin-drawer" type="checkbox" class="drawer-toggle" />
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="drawer-content flex flex-col">
+    <!-- Topbar -->
+    <div class="navbar bg-base-100 shadow-sm border-b border-base-200 px-4">
+      <div class="flex-1 text-2xl font-bold text-primary font-roboto">Panel Administrativo</div>
+      <div class="flex-none">
+        <label for="admin-drawer" class="btn btn-ghost lg:hidden">
+          <i class="lucide lucide-menu w-6 h-6"></i>
+        </label>
+        <div class="dropdown dropdown-end">
+          <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+            <div class="w-10 rounded-full">
+              <img src="https://i.pravatar.cc/100" />
+            </div>
+          </label>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52">
+            <li><a>Mi perfil</a></li>
+            <li><a>Configuración</a></li>
+            <li><a>Cerrar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <main class="p-6 space-y-4">
+      <h1 class="text-3xl font-bold text-primary font-roboto">Bienvenido 👋</h1>
+      <p class="text-lg text-base-content">Selecciona una sección desde el menú lateral.</p>
+      <router-outlet/>
+    </main>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="drawer-side">
+    <label for="admin-drawer" class="drawer-overlay"></label>
+    <aside class="w-80 min-h-full bg-base-200 text-base-content p-4 flex flex-col justify-between">
+      <!-- Logo -->
+      <div class="mb-4">
+        <a routerLink="/" class="btn btn-ghost text-xl font-roboto w-full justify-start">
+          <img src="assets/1741748008788.png" alt="Logo Elephant's Brew" class="h-10 w-auto mr-2"/>
+          Elephant's <span class="text-secondary font-semibold">Brew</span>
+        </a>
+      </div>
+
+      <!-- Menú -->
+      <nav class="flex-1">
+        <ul class="menu text-lg space-y-2">
+          <!-- Usuario -->
+          <li>
+            <details>
+              <summary><i class="lucide lucide-user mr-2 w-5 h-5"></i> Usuario</summary>
+              <ul class="ml-6">
+                <li><a>Configuración</a></li>
+                <li><a>Actualizar datos</a></li>
+              </ul>
+            </details>
+          </li>
+
+          <!-- Usuarios -->
+          <li>
+            <details>
+              <summary><i class="lucide lucide-users mr-2 w-5 h-5"></i> Usuarios</summary>
+              <ul class="ml-6">
+                <li><a>Autorizaciones</a></li>
+                <li><a>Accesos</a></li>
+                <li><a>Administrar usuarios</a></li>
+              </ul>
+            </details>
+          </li>
+
+          <!-- Clientes -->
+          <li><a><i class="lucide lucide-user-round mr-2 w-5 h-5"></i> Clientes</a></li>
+
+          <!-- Depósitos -->
+          <li>
+            <details>
+              <summary><i class="lucide lucide-package-search mr-2 w-5 h-5"></i> Depósitos</summary>
+              <ul class="ml-6">
+                <li><a>Ingresos</a></li>
+                <li><a>Transferencias</a></li>
+                <li><a>Stock</a></li>
+              </ul>
+            </details>
+          </li>
+
+          <!-- Finanzas -->
+          <li>
+            <details>
+              <summary><i class="lucide lucide-wallet mr-2 w-5 h-5"></i> Finanzas</summary>
+              <ul class="ml-6">
+                <li><a>Empresa</a></li>
+                <li><a>Personales</a></li>
+              </ul>
+            </details>
+          </li>
+
+          <!-- Producción -->
+          <li>
+            <details>
+              <summary><i class="lucide lucide-pizza mr-2 w-5 h-5"></i> Producción</summary>
+              <ul class="ml-6">
+                <li><a>Órdenes de producción</a></li>
+                <li><a>Productos</a></li>
+                <li><a>Recetas</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Footer opcional -->
+      <div class="text-xs text-center text-base-content/60 mt-4">
+        &copy; 2025 Elephant's Brew
+      </div>
+    </aside>
+  </div>
+</div>
