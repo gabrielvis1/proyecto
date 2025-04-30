@@ -1,0 +1,62 @@
+<div class="p-6 bg-base-100 min-h-screen space-y-8">
+
+  <!-- Encabezado -->
+  <div class="flex justify-between items-center flex-wrap gap-4">
+    <div>
+      <h1 class="text-3xl font-bold text-primary">Clientes</h1>
+      <p class="text-base-content">Gestión completa de tus clientes, historial y contacto.</p>
+    </div>
+    <div class="flex gap-2">
+      <input type="text" placeholder="Buscar cliente..." class="input input-bordered input-sm w-full max-w-xs" />
+      <button class="btn btn-primary btn-sm">➕ Agregar cliente</button>
+    </div>
+  </div>
+
+  <!-- Tarjetas de clientes -->
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+    <!-- Cliente -->
+    <div class="card bg-base-200 shadow-lg">
+      <div class="card-body space-y-2">
+        <div class="flex items-center gap-3">
+          <div class="avatar">
+            <div class="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+              <img src="https://i.pravatar.cc/100?img=12" />
+            </div>
+          </div>
+          <div>
+            <h2 class="card-title">Elvis Briceño</h2>
+            <p class="text-sm text-base-content/70">Cliente desde 2022</p>
+          </div>
+        </div>
+
+        <!-- Info de contacto -->
+        <div class="text-sm space-y-1">
+          <p>📧 <span class="font-medium">elviscorreo.com</span></p>
+          <p>📞 <span class="font-medium">+54 11 3610-8867</span></p>
+          <p>🏠 Av. Santa Fe 1234, CABA</p>
+        </div>
+
+        <!-- Últimas compras -->
+        <div>
+          <p class="font-semibold">🛒 Últimas compras:</p>
+          <ul class="list-disc list-inside text-sm ml-2">
+            <li>Pan de jamón – 3 unidades</li>
+            <li>Café molido Andino – 1 kg</li>
+            <li>Tequeños – 12 piezas</li>
+          </ul>
+        </div>
+
+        <!-- Acciones -->
+        <div class="card-actions justify-end mt-2">
+          <button class="btn btn-warning btn-sm">✏️ Editar</button>
+          <button class="btn btn-error btn-sm">🗑️ Borrar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Podés duplicar esta tarjeta para más clientes -->
+    <!-- Cliente 2, Cliente 3, etc. -->
+
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<div class="p-6 bg-base-100 min-h-screen space-y-6">
+
+  <!-- Encabezado -->
+  <div class="flex justify-between items-center flex-wrap gap-4">
+    <div>
+      <h1 class="text-3xl font-bold text-primary">Gestión de Depósitos</h1>
+      <p class="text-base-content">Visualizá tus productos y depósitos en paralelo.</p>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      <button class="btn btn-primary btn-sm">➕ Agregar producto</button>
+      <button class="btn btn-info btn-sm">➕ Nuevo depósito</button>
+    </div>
+  </div>
+
+  <!-- Contenedor doble: productos a la izquierda, depósitos a la derecha -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+    <!-- Columna izquierda: Productos -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-bold text-primary">📦 Productos en stock</h2>
+
+      <!-- Tarjeta de producto -->
+      <div class="card bg-base-200 shadow">
+        <div class="card-body">
+          <h3 class="card-title">Café Andino</h3>
+          <p class="text-sm">Stock disponible: 120 unidades</p>
+          <p class="text-sm">Unidad: 250g – Molido</p>
+          <p class="text-sm">Ubicación: Depósito Central</p>
+          <p class="text-sm">Última entrada: 20/04/2025</p>
+          <div class="card-actions justify-end mt-2">
+            <button class="btn btn-sm btn-warning">✏️ Editar</button>
+            <button class="btn btn-sm btn-error">🗑️ Borrar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 shadow">
+        <div class="card-body">
+          <h3 class="card-title">Tequeños Queso</h3>
+          <p class="text-sm">Stock disponible: 85 unidades</p>
+          <p class="text-sm">Unidad: 12 unidades – Congelado</p>
+          <p class="text-sm">Ubicación: Depósito Secundario</p>
+          <p class="text-sm">Última entrada: 18/04/2025</p>
+          <div class="card-actions justify-end mt-2">
+            <button class="btn btn-sm btn-warning">✏️ Editar</button>
+            <button class="btn btn-sm btn-error">🗑️ Borrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna derecha: Depósitos -->
+    <div class="space-y-4">
+      <h2 class="text-2xl font-bold text-secondary">🏬 Depósitos registrados</h2>
+
+      <!-- Tarjeta de depósito -->
+      <div class="card bg-base-200 shadow">
+        <div class="card-body">
+          <h2 class="card-title">Depósito Central</h2>
+          <p class="text-sm">Ubicación: Av. Belgrano 123, CABA</p>
+          <p class="text-sm">Responsable: Carlos Pérez</p>
+          <p class="text-sm">Capacidad: 150 productos</p>
+          <div class="card-actions justify-end mt-2">
+            <button class="btn btn-sm btn-warning">✏️ Editar</button>
+            <button class="btn btn-sm btn-error">🗑️ Borrar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 shadow">
+        <div class="card-body">
+          <h2 class="card-title">Depósito Secundario</h2>
+          <p class="text-sm">Ubicación: Rivadavia 987, CABA</p>
+          <p class="text-sm">Responsable: Laura Gómez</p>
+          <p class="text-sm">Capacidad: 80 productos</p>
+          <div class="card-actions justify-end mt-2">
+            <button class="btn btn-sm btn-warning">✏️ Editar</button>
+            <button class="btn btn-sm btn-error">🗑️ Borrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

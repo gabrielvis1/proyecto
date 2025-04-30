@@ -92,6 +92,7 @@ export class AuthService {
     this._token.set(token);
 
     localStorage.setItem('token', token);
+    console.log(user)
 
     return true;
   }

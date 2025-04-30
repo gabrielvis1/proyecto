@@ -1,0 +1,80 @@
+<div class="p-6 bg-base-100 min-h-screen flex flex-col gap-10">
+
+  <!-- Título principal -->
+  <div>
+    <h1 class="text-3xl font-bold text-primary">Producción</h1>
+    <p class="text-base-content">Gestión de recetas y órdenes de producción en curso</p>
+  </div>
+
+  <!-- Menú de Producción -->
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  <!-- Recetas -->
+  <div class="collapse collapse-arrow bg-base-200 shadow">
+    <input type="checkbox" />
+    <div class="collapse-title text-lg font-medium">📒 Recetas</div>
+    <div class="collapse-content px-4 pb-4">
+      <ul class="menu space-y-1 text-base">
+        <li><a>➕ Crear receta</a></li>
+        <li><a>🔍 Ver recetas</a></li>
+        <li><a>✏️ Editar receta</a></li>
+        <li><a class="text-error">🗑️ Borrar receta</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Órdenes de Producción -->
+  <div class="collapse collapse-arrow bg-base-200 shadow">
+    <input type="checkbox" />
+    <div class="collapse-title text-lg font-medium">🏭 Órdenes de Producción</div>
+    <div class="collapse-content px-4 pb-4">
+      <ul class="menu space-y-1 text-base">
+        <li><a>📝 Crear orden de producción</a></li>
+        <li><a>✅ Confirmar órdenes</a></li>
+        <li><a>📄 Consulta general</a></li>
+        <li><a>🔁 Desconfirmar orden</a></li>
+        <li><a>📦 Parte de producción</a></li>
+        <li><a>🔎 Consulta de orden</a></li>
+        <li><a>📊 Informes</a></li>
+        <li><a>🔄 Cambio de producto</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Órdenes en proceso -->
+  <div>
+    <h2 class="text-2xl font-bold mb-4 text-primary">Órdenes en curso</h2>
+
+    <!-- Orden 1 -->
+    <div class="mb-6 bg-base-200 rounded-lg shadow p-4">
+      <div class="flex justify-between items-center mb-2">
+        <h3 class="text-lg font-semibold">Orden #A001 – Pan de jamón</h3>
+        <span class="badge badge-info">Horneado</span>
+      </div>
+      <progress class="progress progress-info w-full" value="60" max="100"></progress>
+      <p class="text-sm text-base-content/60 mt-1">Avance: 60% – En horno desde hace 20min</p>
+    </div>
+
+    <!-- Orden 2 -->
+    <div class="mb-6 bg-base-200 rounded-lg shadow p-4">
+      <div class="flex justify-between items-center mb-2">
+        <h3 class="text-lg font-semibold">Orden #A002 – Croissants</h3>
+        <span class="badge badge-warning">Mezclado</span>
+      </div>
+      <progress class="progress progress-warning w-full" value="30" max="100"></progress>
+      <p class="text-sm text-base-content/60 mt-1">Avance: 30% – Masa en proceso</p>
+    </div>
+
+    <!-- Orden 3 -->
+    <div class="mb-6 bg-base-200 rounded-lg shadow p-4">
+      <div class="flex justify-between items-center mb-2">
+        <h3 class="text-lg font-semibold">Orden #A003 – Torta de café</h3>
+        <span class="badge badge-success">Empaquetado</span>
+      </div>
+      <progress class="progress progress-success w-full" value="95" max="100"></progress>
+      <p class="text-sm text-base-content/60 mt-1">Avance: 95% – Lista para despacho</p>
+    </div>
+  </div>
+</div>

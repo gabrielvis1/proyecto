@@ -1,0 +1,73 @@
+<div class="p-6 space-y-8 bg-base-100 min-h-screen">
+
+  <!-- Título -->
+  <div>
+    <h1 class="text-3xl font-bold text-primary">Panel General</h1>
+    <p class="text-base text-base-content/70">Resumen de métricas principales de tu cafetería</p>
+  </div>
+
+  <!-- Métricas (tarjetas) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <!-- Ventas -->
+    <div class="stats shadow bg-base-200">
+      <div class="stat">
+        <div class="stat-title">Ventas hoy</div>
+        <div class="stat-value text-success">$3,540</div>
+        <div class="stat-desc">+18% respecto a ayer</div>
+      </div>
+    </div>
+
+    <!-- Clientes -->
+    <div class="stats shadow bg-base-200">
+      <div class="stat">
+        <div class="stat-title">Clientes registrados</div>
+        <div class="stat-value">126</div>
+        <div class="stat-desc">+4 esta semana</div>
+      </div>
+    </div>
+
+    <!-- Stock disponible -->
+    <div class="stats shadow bg-base-200">
+      <div class="stat">
+        <div class="stat-title">Productos en stock</div>
+        <div class="stat-value">234</div>
+        <div class="stat-desc">8 con alerta de stock bajo</div>
+      </div>
+    </div>
+
+    <!-- Ingresos mensuales -->
+    <div class="stats shadow bg-base-200">
+      <div class="stat">
+        <div class="stat-title">Ingresos este mes</div>
+        <div class="stat-value">$45,300</div>
+        <div class="stat-desc text-success">+12% respecto al mes pasado</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Gráfico simulado -->
+  <div class="card bg-base-200 shadow">
+    <div class="card-body">
+      <h2 class="card-title">Ventas semanales</h2>
+      <div class="h-48 w-full bg-gradient-to-r from-primary to-secondary opacity-30 rounded-lg flex items-center justify-center text-sm text-primary-content">
+        📊 Aquí podrías integrar un gráfico real con Chart.js o ApexCharts
+      </div>
+    </div>
+  </div>
+
+  <!-- Últimas novedades -->
+  <div class="card bg-base-200 shadow">
+    <div class="card-body">
+      <h2 class="card-title">Últimas novedades</h2>
+      <ul class="list-disc pl-5 space-y-2 text-base-content">
+        <li>🎉 ¡Nuevo proveedor de café agregado con éxito!</li>
+        <li>📦 Llegó el stock de tazas personalizadas.</li>
+        <li>🔔 El producto <strong>Café Andino</strong> está por debajo del stock mínimo.</li>
+        <li>👥 3 nuevos usuarios han sido registrados hoy.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>

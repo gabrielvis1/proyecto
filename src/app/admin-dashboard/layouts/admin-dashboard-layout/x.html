@@ -3,12 +3,7 @@
 
   <!-- TOPBAR fija -->
   <div class="navbar bg-base-100 shadow-sm border-b border-base-200 px-4 z-50">
-    <div class="flex-1 text-2xl font-bold font-roboto">
-      <a routerLink="/admin" class="btn btn-ghost text-xl font-roboto justify-start">
-        <img src="assets/1741748008788.png" alt="Logo Elephant's Brew" class="h-10 w-auto mr-2" />Elephant's <span class="text-secondary font-semibold">Brew</span>
-      </a>
-    </div>
-    <div class="flex-1 text-2xl font-bold text-primary font-roboto">{{user()?.nombre}} {{user()?.apellido}}</div>
+    <div class="flex-1 text-2xl font-bold text-primary font-roboto">Panel Administrativo</div>
     <div class="flex-none">
       <!-- Hamburguesa solo en móviles -->
       <label for="sidebar-toggle" class="btn btn-ghost lg:hidden">
@@ -27,8 +22,8 @@
           </div>
         </label>
         <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52">
-          <li><a [routerLink]="['/admin/perfil', user()?._id]">Mi perfil</a></li>
-          <li><a [routerLink]="['/admin/perfil', user()?._id]">Configuración</a></li>
+          <li><a>Mi perfil</a></li>
+          <li><a>Configuración</a></li>
           <li><a>Cerrar sesión</a></li>
         </ul>
       </div>
@@ -40,7 +35,34 @@
 
     <!-- SIDEBAR (scroll vertical solo aquí) -->
     <input type="checkbox" id="sidebar-toggle" class="hidden peer" />
-    <aside id="menu" class="peer-checked:hidden lg:block bg-base-200 w-64 h-full overflow-y-auto flex-shrink-0">
+    <aside
+      id="menu"
+      class="peer-checked:hidden lg:block bg-base-200 w-64 h-full overflow-y-auto flex-shrink-0"
+    >
+      <!-- Logo -->
+      <div id="logo" class="my-4 px-3">
+        <a routerLink="/admin" class="btn btn-ghost text-xl font-roboto w-full justify-start">
+          <img src="assets/1741748008788.png" alt="Logo Elephant's Brew" class="h-10 w-auto mr-2" />
+          Elephant's <span class="text-secondary font-semibold">Brew</span>
+        </a>
+        <p class="text-slate-500 text-sm">Sistema de Gestión</p>
+      </div>
+
+      <!-- Perfil del usuario -->
+      <div id="profile" class="px-6 py-10">
+        <p class="text-slate-500">Bienvenido</p>
+        <a [routerLink]="['/admin/perfil', user()?._id]" class="inline-flex space-x-2 items-center">
+          <span>
+            <img class="rounded-full w-8 h-8"
+                 src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=128&q=80"
+                 alt="Avatar usuario" />
+          </span>
+          <span class="text-sm md:text-base font-bold">
+            {{user()?.nombre}} {{user()?.apellido}}
+          </span>
+        </a>
+      </div>
+
       <!-- Navegación lateral -->
       <div id="nav" class="w-full px-6 space-y-2 pb-10 mt-auto">
         <a routerLink="/admin/dashboard" routerLinkActive="bg-blue-800" class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150">

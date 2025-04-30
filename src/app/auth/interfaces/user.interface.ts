@@ -1,4 +1,5 @@
 export interface Usuario {
+  id:             string;
   _id:            string;
   nombre:         string;
   apellido:       string;
@@ -7,7 +8,7 @@ export interface Usuario {
   rol:            string;
   departamento:   string;
   activo:         boolean;
-  fecha_creacion: Date;
+  fecha_creacion: string;
   __v:            number;
   imagen:         string;
 }

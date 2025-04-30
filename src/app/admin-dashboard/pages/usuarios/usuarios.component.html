@@ -1,0 +1,83 @@
+<div class="p-6 bg-base-100 min-h-screen space-y-6">
+  <!-- Encabezado -->
+  <div>
+    <h1 class="text-3xl font-bold text-primary">Gestión de Usuarios</h1>
+    <p class="text-base-content">Administrá los accesos, estados y roles de tu equipo.</p>
+  </div>
+
+  <!-- Tabla de usuarios -->
+  <div class="overflow-x-auto">
+    <table class="table table-zebra bg-base-200 shadow-lg rounded-lg">
+      <thead>
+        <tr>
+          <th>👤 Usuario</th>
+          <th>📧 Correo</th>
+          <th>🎯 Rol</th>
+          <th>🟢 Estado</th>
+          <th class="text-center">🔧 Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Fila 1 -->
+        <tr>
+          <td>Elvis Briceño</td>
+          <td>elviscafe.com</td>
+          <td>
+            <select class="select select-bordered select-sm w-full max-w-xs">
+              <option selected>Administrador</option>
+              <option>Supervisor</option>
+              <option>Operador</option>
+              <option>Invitado</option>
+            </select>
+          </td>
+          <td>
+            <input type="checkbox" class="toggle toggle-success" checked />
+          </td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-outline btn-primary">Editar permisos</button>
+          </td>
+        </tr>
+
+        <!-- Fila 2 -->
+        <tr>
+          <td>María López</td>
+          <td>mariacafe.com</td>
+          <td>
+            <select class="select select-bordered select-sm w-full max-w-xs">
+              <option>Administrador</option>
+              <option selected>Supervisor</option>
+              <option>Operador</option>
+              <option>Invitado</option>
+            </select>
+          </td>
+          <td>
+            <input type="checkbox" class="toggle toggle-success" />
+          </td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-outline btn-primary">Editar permisos</button>
+          </td>
+        </tr>
+
+        <!-- Fila 3 -->
+        <tr>
+          <td>Pedro Ramírez</td>
+          <td>pedrocafe.com</td>
+          <td>
+            <select class="select select-bordered select-sm w-full max-w-xs">
+              <option>Administrador</option>
+              <option>Supervisor</option>
+              <option selected>Operador</option>
+              <option>Invitado</option>
+            </select>
+          </td>
+          <td>
+            <input type="checkbox" class="toggle toggle-success" checked />
+          </td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-outline btn-primary">Editar permisos</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
