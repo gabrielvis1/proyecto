@@ -1,1 +1,80 @@
-<p>desarrollo works!</p>,
+<div class="p-6 bg-base-100 min-h-screen space-y-8">
+
+  <!-- Título principal -->
+  <div>
+    <h1 class="text-3xl font-bold text-primary">🧁 Desarrollo de Nuevos Productos</h1>
+    <p class="text-base-content">Prototipos, ideas y procesos para la innovación gastronómica de Elephant's Brew.</p>
+  </div>
+
+  <!-- Sección de propuesta -->
+  <div class="card bg-base-200 shadow-md">
+    <div class="card-body space-y-4">
+      <h2 class="card-title text-lg">📘 Proponer una nueva receta</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" placeholder="Nombre del producto o receta" class="input input-bordered w-full" />
+        <input type="text" placeholder="Categoría (pan, café, dulce...)" class="input input-bordered w-full" />
+        <textarea class="textarea textarea-bordered col-span-full" placeholder="Descripción de la receta o idea"></textarea>
+        <input type="number" placeholder="Costo estimado ($)" class="input input-bordered w-full" />
+        <input type="number" placeholder="Precio sugerido de venta ($)" class="input input-bordered w-full" />
+        <input type="file" class="file-input file-input-bordered w-full col-span-full" />
+      </div>
+
+      <div class="card-actions justify-end">
+        <button class="btn btn-success">📤 Enviar propuesta</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ensayos de productos -->
+  <div>
+    <h2 class="text-2xl font-bold text-secondary mb-4">🧪 Recetas en desarrollo</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+      <!-- Receta 1 -->
+      <div class="card bg-base-200 shadow">
+        <div class="card-body">
+          <h3 class="card-title">Brownie de café con nuez</h3>
+          <p>Estado: <span class="badge badge-info">En prueba</span></p>
+          <p>Costo estimado: $450 | Precio sugerido: $1200</p>
+          <div class="progress progress-info w-full mt-2" value="60" max="100"></div>
+        </div>
+      </div>
+
+      <!-- Receta 2 -->
+      <div class="card bg-base-200 shadow">
+        <div class="card-body">
+          <h3 class="card-title">Bollito dulce con crema de café</h3>
+          <p>Estado: <span class="badge badge-success">Aprobado</span></p>
+          <p>Costo estimado: $300 | Precio sugerido: $900</p>
+          <div class="progress progress-success w-full mt-2" value="100" max="100"></div>
+        </div>
+      </div>
+
+      <!-- Receta 3 -->
+      <div class="card bg-base-200 shadow">
+        <div class="card-body">
+          <h3 class="card-title">Galleta crocante de cacao y espresso</h3>
+          <p>Estado: <span class="badge badge-warning">Pendiente revisión</span></p>
+          <p>Costo estimado: $150 | Precio sugerido: $500</p>
+          <div class="progress progress-warning w-full mt-2" value="35" max="100"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Investigación / Inspiración -->
+  <div class="card bg-base-200 shadow-md">
+    <div class="card-body">
+      <h2 class="card-title">💡 Banco de ideas y tendencias</h2>
+      <ul class="list-disc pl-5 space-y-1 text-base-content">
+        <li>Incluir opciones sin gluten o sin azúcar para el café.</li>
+        <li>Desarrollar productos inspirados en postres venezolanos con un twist moderno.</li>
+        <li>Explorar variantes saladas para acompañar espresso.</li>
+        <li>Ofrecer packs degustación: mini café + mini panificados.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>

@@ -12,14 +12,21 @@ import { DepositosComponent } from "./pages/depositos/depositos.component";
 import { VentasComponent } from "./pages/ventas/ventas.component";
 import { DesarrolloComponent } from "./pages/desarrollo/desarrollo.component";
 import { PlanificacionComponent } from "./pages/planificacion/planificacion.component";
+import { MainComponent } from "./pages/main/main.component";
+import { StockComponent } from "./pages/stock/stock.component";
+import { IsAdminGuard } from "@auth/guards/is-admin.guard";
 
 
 export const adminDashboardRoutes: Routes =[
   {
     path: '',
     component: AdminDashboardLayoutComponent,
-    canMatch: [],
+    canMatch: [IsAdminGuard],
     children: [
+      {
+        path: '',
+        component: MainComponent,
+      },
       {
         path: 'perfil/:id',
         component: PerfilAdminPageComponent,
@@ -27,6 +34,10 @@ export const adminDashboardRoutes: Routes =[
       {
         path: 'dashboard',
         component: DashboardComponent,
+      },
+      {
+        path: 'stock',
+        component: StockComponent,
       },
       {
         path: 'produccion',

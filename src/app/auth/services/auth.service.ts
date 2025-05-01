@@ -34,6 +34,7 @@ export class AuthService {
 
   user = computed(() => this._user());
   token = computed(this._token);
+  isAdmin = computed(()=> this._user()?.rol.includes('')?? false);
 
   login(email: string, password: string):Observable<boolean>{
     return this.http
@@ -90,10 +91,7 @@ export class AuthService {
     this._user.set(user);
     this._authStatus.set('authenticated');
     this._token.set(token);
-
     localStorage.setItem('token', token);
-    console.log(user)
-
     return true;
   }
 

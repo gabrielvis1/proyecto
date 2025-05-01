@@ -28,8 +28,7 @@
         </label>
         <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52">
           <li><a [routerLink]="['/admin/perfil', user()?._id]">Mi perfil</a></li>
-          <li><a [routerLink]="['/admin/perfil', user()?._id]">Configuración</a></li>
-          <li><a>Cerrar sesión</a></li>
+          <li><a routerLink="/" class="btn btn-error" (click)="authService.logout()">Salir</a></li>
         </ul>
       </div>
     </div>
@@ -53,6 +52,17 @@
             <div class="flex flex-col">
                 <span class="text-lg font-bold leading-5 text-white">Dashboard</span>
                 <span class="text-sm text-white/50 hidden md:block">Datos de Empresa </span>
+            </div>
+        </a>
+        <a routerLink="/admin/stock" routerLinkActive="bg-blue-800" class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z" />
+              </svg>
+            </div>
+            <div class="flex flex-col">
+                <span class="text-lg text-slate-300 font-bold leading-5">Stock, y productos</span>
+                <span class="text-sm text-slate-500 hidden md:block">Ver, agregar y quitar productos</span>
             </div>
         </a>
         <a routerLink="/admin/produccion" routerLinkActive="bg-blue-800" class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150">

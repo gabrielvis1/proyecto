@@ -1,1 +1,111 @@
-<p>planificacion works!</p>,
+<div class="p-6 bg-base-100 min-h-screen space-y-10">
+
+  <!-- Título -->
+  <div>
+    <h1 class="text-3xl font-bold text-primary">📅 Planificación de Producción</h1>
+    <p class="text-base-content">Organizá tu producción semanal y seguí el calendario de órdenes programadas.</p>
+  </div>
+
+  <!-- Mapa de planificación semanal -->
+  <div>
+    <h2 class="text-2xl font-bold text-secondary mb-4">🗺️ Producción semanal</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 text-sm">
+
+      <!-- Día de la semana -->
+      <div class="bg-base-200 p-4 rounded shadow">
+        <h3 class="font-semibold text-base mb-2">Lunes</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>🧁 Producción de brownies – 120 unidades</li>
+          <li>☕ Café molido Andino – 30kg</li>
+        </ul>
+      </div>
+
+      <div class="bg-base-200 p-4 rounded shadow">
+        <h3 class="font-semibold text-base mb-2">Martes</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>🥐 Tequeños – 150 paquetes</li>
+        </ul>
+      </div>
+
+      <div class="bg-base-200 p-4 rounded shadow">
+        <h3 class="font-semibold text-base mb-2">Miércoles</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>🧁 Pan de jamón – 100 unidades</li>
+        </ul>
+      </div>
+
+      <div class="bg-base-200 p-4 rounded shadow">
+        <h3 class="font-semibold text-base mb-2">Jueves</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>🎂 Torta de café – 25 unidades</li>
+          <li>🥐 Mini croissants – 180 unidades</li>
+        </ul>
+      </div>
+
+      <div class="bg-base-200 p-4 rounded shadow">
+        <h3 class="font-semibold text-base mb-2">Viernes</h3>
+        <ul class="list-disc list-inside space-y-1">
+          <li>☕ Café especial tostado – 20kg</li>
+        </ul>
+      </div>
+
+      <div class="bg-base-200 p-4 rounded shadow">
+        <h3 class="font-semibold text-base mb-2">Sábado</h3>
+        <p class="text-base-content/60">Sin producción programada</p>
+      </div>
+
+      <div class="bg-base-200 p-4 rounded shadow">
+        <h3 class="font-semibold text-base mb-2">Domingo</h3>
+        <p class="text-base-content/60">Sin producción programada</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Calendario mensual simple -->
+  <div>
+    <h2 class="text-2xl font-bold text-primary mb-4">📆 Próximas producciones</h2>
+    <div class="bg-base-200 rounded-lg p-4 overflow-x-auto">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>02/05/2025</td>
+            <td>Pan de jamón</td>
+            <td>100 unidades</td>
+            <td><span class="badge badge-warning">Pendiente</span></td>
+          </tr>
+          <tr>
+            <td>03/05/2025</td>
+            <td>Café molido Andino</td>
+            <td>25 kg</td>
+            <td><span class="badge badge-info">En proceso</span></td>
+          </tr>
+          <tr>
+            <td>04/05/2025</td>
+            <td>Tequeños</td>
+            <td>200 paquetes</td>
+            <td><span class="badge badge-success">Confirmado</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Lista de tareas clave -->
+  <div>
+    <h2 class="text-2xl font-bold text-secondary mb-4">📋 Tareas clave de planificación</h2>
+    <ul class="list-disc pl-5 space-y-1">
+      <li>Confirmar órdenes de insumos antes del lunes</li>
+      <li>Actualizar stock disponible luego de cada jornada</li>
+      <li>Verificar disponibilidad del personal para el jueves</li>
+      <li>Registrar observaciones y tiempos reales de producción</li>
+    </ul>
+  </div>
+</div>

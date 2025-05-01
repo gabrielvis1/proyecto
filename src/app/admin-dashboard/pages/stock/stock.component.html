@@ -1,0 +1,78 @@
+<div class="p-6 bg-base-100 min-h-screen space-y-8">
+
+  <!-- Título principal -->
+  <div class="flex justify-between items-center flex-wrap gap-4">
+    <div>
+      <h1 class="text-3xl font-bold text-primary">📦 Gestión de Stock</h1>
+      <p class="text-base-content">Control y detalle completo de tus productos almacenados.</p>
+    </div>
+    <div class="flex gap-2">
+      <button class="btn btn-primary btn-sm">➕ Agregar producto</button>
+      <button class="btn btn-accent btn-sm">✏️ Editar producto</button>
+    </div>
+  </div>
+
+  <!-- Buscador -->
+  <div class="form-control">
+    <label class="label">
+      <span class="label-text">Buscar producto</span>
+    </label>
+    <input type="text" placeholder="Buscar por nombre... ej: Tequeños" class="input input-bordered w-full" />
+  </div>
+
+  <!-- Información del producto seleccionado -->
+  <div class="bg-base-200 rounded-lg p-6 shadow-md">
+    <div class="flex flex-wrap justify-between items-center gap-4 mb-4">
+      <h2 class="text-2xl font-bold text-secondary">🧀 Tequeños</h2>
+      <span class="badge badge-success badge-lg">Stock disponible: 120 unidades</span>
+    </div>
+
+    <!-- Pestañas -->
+    <div role="tablist" class="tabs tabs-bordered tabs-lg">
+      <input type="radio" name="tab-stock" role="tab" class="tab" aria-label="Receta" checked />
+      <div role="tabpanel" class="tab-content border-base-300 rounded-box p-6">
+        <h3 class="font-semibold text-lg mb-2">📋 Ingredientes</h3>
+        <ul class="list-disc pl-5">
+          <li>Masa de harina de trigo</li>
+          <li>Queso blanco semiduro</li>
+          <li>Sal, agua, aceite vegetal</li>
+        </ul>
+      </div>
+
+      <input type="radio" name="tab-stock" role="tab" class="tab" aria-label="Usos" />
+      <div role="tabpanel" class="tab-content border-base-300 rounded-box p-6">
+        <p>Los tequeños se venden como producto congelado o ya horneado. Se utilizan como snack principal en meriendas, cafeterías y eventos.</p>
+      </div>
+
+      <input type="radio" name="tab-stock" role="tab" class="tab" aria-label="Empaques" />
+      <div role="tabpanel" class="tab-content border-base-300 rounded-box p-6">
+        <p>Empaque actual: Caja de cartón sellada, 20 unidades por caja, 400g aprox.</p>
+      </div>
+
+      <input type="radio" name="tab-stock" role="tab" class="tab" aria-label="Descripción" />
+      <div role="tabpanel" class="tab-content border-base-300 rounded-box p-6">
+        <p>Deliciosos tequeños de queso venezolanos, ideales para calentar y servir. Elaborados con masa artesanal y rellenos de queso fresco.</p>
+      </div>
+
+      <input type="radio" name="tab-stock" role="tab" class="tab" aria-label="Etiquetas" />
+      <div role="tabpanel" class="tab-content border-base-300 rounded-box p-6">
+        <div class="flex flex-wrap gap-2">
+          <div class="badge badge-outline badge-primary">Congelado</div>
+          <div class="badge badge-outline badge-secondary">Venezolano</div>
+          <div class="badge badge-outline badge-info">Snack</div>
+          <div class="badge badge-outline badge-warning">Queso</div>
+        </div>
+      </div>
+
+      <input type="radio" name="tab-stock" role="tab" class="tab" aria-label="Otros" />
+      <div role="tabpanel" class="tab-content border-base-300 rounded-box p-6 space-y-2">
+        <p><strong>Proveedor:</strong> Distribuidora Del Sabor</p>
+        <p><strong>Ubicación:</strong> Depósito Central 1</p>
+        <p><strong>Fecha de expiración estimada:</strong> 15/08/2025</p>
+        <p><strong>Precio sugerido de venta:</strong> $2.200</p>
+        <p><strong>Costo unitario:</strong> $950</p>
+      </div>
+    </div>
+  </div>
+
+</div>
