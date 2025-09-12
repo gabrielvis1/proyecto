@@ -3,7 +3,7 @@ import { computed, inject, Injectable, signal } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { AuthResponse } from '@auth/interfaces/auth-response.interface';
 import { Usuario } from '@auth/interfaces/user.interface';
-import { catchError, map, Observable, of, tap } from 'rxjs';
+import { catchError, map, Observable, of, shareReplay, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 type AuthStatus = 'checking' | 'authenticated' | 'not-authenticated';
@@ -64,21 +64,33 @@ export class AuthService {
       );
   }
 
-  checkStatus(): Observable<boolean>{
-    const token = localStorage.getItem('token');
-    if (!token) {
-      this.logout();
-      return of(false);
-    }
-    return this.http.get<AuthResponse>(`${baseUrl}/users/logeado`,
-      {
-        //headers:{Authorization:`${token}`}
-    })
-    .pipe(
-      map((resp)=> this.handleAuthSuccess(resp)),
-      catchError((error: any) =>this.handleAuthError(error))
-    );
+private statusCache$: Observable<boolean> | null = null;
+private lastCheckTime = 0;
+private CACHE_DURATION = 5 * 60 * 1000; // 5 minutos
+
+checkStatus(): Observable<boolean> {
+  const token = localStorage.getItem('token');
+  if (!token) {
+    this.logout();
+    return of(false);
   }
+
+  const now = Date.now();
+  const isCacheValid = (now - this.lastCheckTime) < this.CACHE_DURATION;
+
+  if (!this.statusCache$ || !isCacheValid) {
+    this.lastCheckTime = now;
+    this.statusCache$ = this.http.get<AuthResponse>(`${baseUrl}/users/logeado`)
+      .pipe(
+        map(resp => this.handleAuthSuccess(resp)),
+        catchError((error: any) => this.handleAuthError(error)),
+        shareReplay(1)
+      );
+  }
+
+  return this.statusCache$;
+}
+
 
   logout() {
     this._user.set(null);

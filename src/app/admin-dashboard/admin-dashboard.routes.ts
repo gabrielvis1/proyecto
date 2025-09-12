@@ -15,6 +15,8 @@ import { PlanificacionComponent } from "./pages/planificacion/planificacion.comp
 import { MainComponent } from "./pages/main/main.component";
 import { StockComponent } from "./pages/stock/stock.component";
 import { IsAdminGuard } from "@auth/guards/is-admin.guard";
+import { ProductNuevoComponent } from "./pages/product-nuevo/product-nuevo.component";
+import { FinanzapersonalComponent } from "./pages/finanzapersonal/finanzapersonal.component";
 
 
 export const adminDashboardRoutes: Routes =[
@@ -40,6 +42,14 @@ export const adminDashboardRoutes: Routes =[
         component: StockComponent,
       },
       {
+        path: 'stock/:id',
+        component: StockComponent,
+      },
+      {
+        path: 'productos',
+        component: ProductsAdminPageComponent,
+      },
+      {
         path: 'produccion',
         component: ProduccionComponent,
       },
@@ -52,12 +62,20 @@ export const adminDashboardRoutes: Routes =[
         component: ProductAdminPageComponent,
       },
       {
+        path: 'producto/nuevo',
+        component: ProductNuevoComponent,
+      },
+      {
         path: 'usuarios',
         component: UsuariosComponent,
       },
       {
         path: 'finanzas',
         component: FinanzasComponent,
+      },
+      {
+        path: 'finanzapersonal',
+        component: FinanzapersonalComponent,
       },
       {
         path: 'clientes',

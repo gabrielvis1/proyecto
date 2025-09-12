@@ -1,1 +1,20 @@
-<p>products-admin-page works!</p>,
+<div class="p-6 bg-base-100 min-h-screen space-y-6">
+
+  <!-- Encabezado -->
+  <div class="flex justify-between items-center flex-wrap gap-4">
+    <div>
+      <h1 class="text-3xl font-bold text-primary">🧾 Lista de Productos</h1>
+      <p class="text-base-content">Productos disponibles en sistema. Total: <span class="font-bold">{{productsResource.value()?.total}}</span></p>
+    </div>
+    <a routerLink="/admin/producto/nuevo" class="btn btn-primary btn-sm">
+      ➕ Agregar producto
+    </a>
+  </div>
+
+
+
+        <!-- Fila producto 1 -->
+        <product-table [products]="productsResource.value()?.productos ?? []"/>
+
+
+</div>

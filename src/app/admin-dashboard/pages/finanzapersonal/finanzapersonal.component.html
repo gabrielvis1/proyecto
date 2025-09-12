@@ -1,0 +1,94 @@
+<div class="p-6 bg-base-100 min-h-screen space-y-8">
+
+  <!-- Encabezado -->
+  <div class="flex justify-between items-center flex-wrap gap-4">
+    <h1 class="text-3xl font-bold text-primary">📊 Panel Financiero</h1>
+    <div class="flex flex-wrap gap-2">
+      <button class="btn btn-success btn-sm">➕ Agregar Activo</button>
+      <button class="btn btn-info btn-sm">🔄 Actualizar Activos</button>
+      <button class="btn btn-warning btn-sm">➕ Anotar Deuda</button>
+      <button class="btn btn-accent btn-sm">🏠 Anotar Capital / Propiedad</button>
+    </div>
+  </div>
+
+  <!-- Resumen general -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="card bg-base-200 shadow">
+      <div class="card-body">
+        <h2 class="card-title">Capital Propiedades</h2>
+        <p class="text-2xl font-bold text-primary">8,222,123.00</p>
+      </div>
+    </div>
+    <div class="card bg-base-200 shadow">
+      <div class="card-body">
+        <h2 class="card-title">Activos Totales</h2>
+        <p class="text-2xl font-bold text-success">1,676,612.21</p>
+      </div>
+    </div>
+    <div class="card bg-base-200 shadow">
+      <div class="card-body">
+        <h2 class="card-title">Deudas</h2>
+        <p class="text-2xl font-bold text-error">5,423,331.59</p>
+      </div>
+    </div>
+    <div class="card bg-base-200 shadow">
+      <div class="card-body">
+        <h2 class="card-title">Patrimonio Neto</h2>
+        <p class="text-2xl font-bold text-info">4,475,403.62</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Activos en Pesos -->
+  <div class="card bg-base-200 shadow">
+    <div class="card-body">
+      <h2 class="card-title text-primary">💵 Activos en Pesos</h2>
+      <p class="text-lg font-bold">1,408,760.52</p>
+      <div class="overflow-x-auto mt-4">
+        <table class="table table-zebra">
+          <thead>
+            <tr>
+              <th>Activo</th>
+              <th>Valor (ARS)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Plazo fijo Galicia</td><td>189,010.38</td></tr>
+            <tr><td>Mercado Pago</td><td>213,027.25</td></tr>
+            <tr><td>FCI Ualá</td><td>271,541.30</td></tr>
+            <tr><td>AAPL</td><td>81,283.15</td></tr>
+            <tr><td>Microsoft</td><td>50,662.34</td></tr>
+            <!-- más activos... -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Activos en Dólares / Criptos -->
+  <div class="card bg-base-200 shadow">
+    <div class="card-body">
+      <h2 class="card-title text-primary">💲 Activos en Dólares / Criptos</h2>
+      <p class="text-lg font-bold">196.58</p>
+      <div class="overflow-x-auto mt-4">
+        <table class="table table-zebra">
+          <thead>
+            <tr>
+              <th>Activo</th>
+              <th>USD</th>
+              <th>Crypto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Dólares Ualá</td><td>1.07</td><td>-</td></tr>
+            <tr><td>Simplestate</td><td>32.43</td><td>-</td></tr>
+            <tr><td>Bitcoin</td><td>62.73</td><td>0.00055715</td></tr>
+            <tr><td>Ethereum</td><td>60.20</td><td>0.01358331</td></tr>
+            <tr><td>Binance</td><td>40.15</td><td>0.04712231</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>

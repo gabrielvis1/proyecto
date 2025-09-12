@@ -1,0 +1,49 @@
+  <!-- Tabla de productos -->
+  <div class="overflow-x-auto rounded-xl shadow-md">
+    <table class="table table-zebra">
+      <!-- Encabezados -->
+      <thead class="text-base-content text-sm">
+        <tr>
+          <th></th>
+          <th>Producto</th>
+          <th>Código</th>
+          <th>Stock</th>
+          <th>Precio</th>
+          <th>Últ. Producción</th>
+          <th>Ventas/Mes</th>
+          <th>estado</th>
+          <th class="text-center">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+@for (product of products(); track product._id) {
+  <tr>
+    <th><input type="checkbox" class="checkbox" /></th>
+    <td>
+      <div class="flex items-center gap-3">
+        <div class="avatar">
+          <div class="mask mask-squircle w-12 h-12">
+            <img [src]="product.images | productImage" [alt]="product.nombre" crossorigin="anonymous" />
+          </div>
+        </div>
+        <div><a [routerLink]="['/admin/products', product?._id]"><div class="font-bold">{{product.nombre}}</div></a></div>
+      </div>
+    </td>
+    <td><span class="font-mono text-sm">{{product.codigo}}</span></td>
+    <td><a [routerLink]="['/admin/stock', product?._id]" class="link link-primary">{{product.cantidad}} Unidades de stock</a></td>
+    <td><span class="badge badge-success text-sm">${{product.precio_venta}}</span></td>
+    <td>{{product.ultima_actualizacion_stock}}</td>
+    <td>ventas de mes</td>
+    <td>{{product.estado}}</td>
+    <td class="text-center">
+      <div class="flex flex-wrap gap-2 justify-center">
+        <a [routerLink]="['/admin/stock', product?._id]" class="btn btn-outline btn-info btn-xs">Ver stock</a>
+        <a [routerLink]="['/admin/products', product?._id]" class="btn btn-outline btn-warning btn-xs">Editar</a>
+      </div>
+    </td>
+  </tr>
+}
+
+</tbody>
+</table>
+</div>
